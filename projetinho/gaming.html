@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Jogos</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', Arial, sans-serif;
+            background-image: url('img/lindooo_.jpg');
+            background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Impede que a imagem se repita */
+            height: 90vh; /* Garante que o body ocupe toda a altura da tela */
+            margin: 0; /* Remove margens padrão */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ffd700;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #ffd700;
+            font-size: 2.5em;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: flex;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffd700;
+            width: 150px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            background-color: #000000;
+            margin-right: 10px;
+            font: inherit;
+            color: #ffd700;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffd700;
+            border-radius: 4px;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            clip-path: polygon(14% 44%, 0% 65%, 50% 100%, 100% 18%, 80% 0%, 43% 62%);
+            background-color: transparent;
+            transform-origin: bottom left;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em #ffd700;
+            background-color: #ffd700;
+        }
+
+        input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
+        input[type="checkbox"]:focus {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ffd700, #b8860b);
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.10s, box-shadow 0.10s;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .saida {
+            background: linear-gradient(135deg, #ffd700, #b8860b);
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.10s, box-shadow 0.10s;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .saida:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">
+        <button>Voltar</button>
+    </a>
+    <h1>Selecione os jogos que você quer jogar:</h1>
+    
+    <form id="programForm">
+        <label class="Valorant">
+            <input type="checkbox" name="program" value="Valorant">
+            Valorant
+        </label>
+        <label class="Fortnite">
+            <input type="checkbox" name="program" value="Fortnite">
+            Fortnite
+        </label>
+        <label class="CS2">
+            <input type="checkbox" name="program" value="CS2">
+            CS2
+        </label>
+        <label class="R6">
+            <input type="checkbox" name="program" value="R6">
+            R6
+        </label>
+        <label class="FIFA">
+            <input type="checkbox" name="program" value="FIFA">
+            FIFA/PES
+        </label>
+        <label class="Rocket">
+            <input type="checkbox" name="program" value="Rocket">
+            Rocket League
+        </label>
+        <label class="PUBG">
+            <input type="checkbox" name="program" value="PUBG">
+            PUBG
+        </label>
+        <label class="Apex">
+            <input type="checkbox" name="program" value="Apex">
+            Apex Legends
+        </label>
+        <button type="button" onclick="continuar()">Continuar</button>
+
+    </form>
+
+    <script>
+        function continuar() {
+            const form = document.getElementById('programForm');
+            const selectedPrograms = [];
+            const checkboxes = form.querySelectorAll('input[name="program"]:checked');
+
+            checkboxes.forEach((checkbox) => {
+                selectedPrograms.push(checkbox.value);
+            });
+
+            if (selectedPrograms.length === 0) {
+                alert('Por favor, selecione pelo menos um programa.');
+                return; // Impede a execução das próximas condições
+            }
+
+            if (selectedPrograms.length <= 2) {
+                alert('Você selecionou: ' + selectedPrograms.join(', '));
+                window.location.href = 'two-gaming.html';
+            } else {
+                alert('Você selecionou: ' + selectedPrograms.join(', '));
+                window.location.href = 'threeplus-gaming.html';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dois ou Menos</title>
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #333333);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ffd700;
+            color: #000;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        header div {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 280px;
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-container p {
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 2rem;
+        }
+
+        button {
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e5c100;
+        }
+
+        header {
+            background-color: #ffd700;
+            color: #000;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        #menuToggle {
+            display: none;
+            background: #ffd700;
+            color: #000;
+            border: none;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Montagem de PC</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.prim.html">Início</a></li>
+                <li><a href="index.html">Montagem de PCs</a></li>
+                <li><a href="#suporte">Suporte Técnico</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle">☰</button>
+    </header>
+    <header>
+        <div>Você selecionou dois jogos ou mais!</div>
+        <div>Com isso, montamos um PC de acordo com sua necessidade:</div>
+        <div>Clique em cima da foto para ir para o site com o melhor preço!</div>
+    </header>
+
+    <div class="container">
+        <div class="image-container">
+            <a href="https://www.amazon.com.br/PROCESSADOR-GRAFICO-MSI-GEFORCE912-V397-484-VENTUS/dp/B08WHJFYM8/ref=asc_df_B08WHJFYM8/?tag=googleshopp00-20&linkCode=df0&hvadid=709884378214&hvpos=&hvnetw=g&hvrand=2879429772861268044&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100927&hvtargid=pla-1215951699092&psc=1&mcid=59fe94bb97b6375ca5f5fbc68b17078d&gad_source=1" target="_blank">
+                <img src="img\GTX3060.png" alt="Placa de vídeo RTX 4060 ASUS">
+            </a>
+            <p>Esta é a Placa de vídeo RTX 3060.</p>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.kabum.com.br/produto/129451/processador-amd-ryzen-5-5600x-3-7ghz-4-6ghz-max-turbo-cache-35mb-6-nucleos-12-threads-am4-100-100000065box?utm_id=21416437563&gad_source=1&gclid=EAIaIQobChMIqs-bxuKmiAMVrBGtBh2OSAc3EAQYBiABEgK-MvD_BwE" target="_blank">
+                <img src="img\Ryzen55600X.png" alt="Processador AMD Ryzen 3">
+            </a>
+            <p>Este é o Processador AMD Ryzen 5 5600X.</p>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.terabyteshop.com.br/produto/28896/placa-mae-asus-prime-b650m-f-chipset-b650-amd-am5-matx-ddr5-90mb1hk0-m0eay0" target="_blank">
+                <img src="img\PRIMEB650M-F.png" alt="Placa Mãe Duex DX A320M">
+            </a>
+            <p>Esta é a Placa Mãe Asus PRIME B650M-F.</p>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.terabyteshop.com.br/produto/29131/memoria-ddr4-redragon-flame-8gb-3200mhz-gm-703" target="_blank">
+                <img src="img\REDRAGON8GB.png" alt="Memória DDR4 Kingston Fury, 8GB">
+            </a>
+            <p>Esta é a Memória DDR4 Redragon Flame, 8GB.</p>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.kabum.com.br/produto/338408/ssd-sata-wd-green-480gb-2-5-leitura-545mb-s-e-gravacao-430mb-s-preto-wds480g3g0a?utm_id=21437971630&gad_source=1&gclid=EAIaIQobChMIrtm81tamiAMVhlRIAB2qWgANEAQYBiABEgJbu_D_BwE" target="_blank">
+                <img src="img\SSD480GB.png" alt="SSD Kingston 240GB">
+            </a>
+            <p>Este é o SSD SATA WD Green, 480GB.</p>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.terabyteshop.com.br/produto/22964/gabinete-gamer-ninja-apolo-mini-tower-rgb-matx-black-sem-fonte-com-3-fans" target="_blank">
+                <img src="img/gabinete.jpg" alt="Gabinete Gamer Ninja Apolo">
+            </a>
+            <p>Este é o Gabinete Gamer Ninja Apolo.</p>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.terabyteshop.com.br/produto/13329/fonte-gamemax-gp650-650w-80-plus-bronze-pfc-ativo-black?srsltid=AfmBOorADB8JjDNdaezTsG2DTlRPlVMQCnLrh1eXNC7JSwrLm43mp3Y5l2M" target="_blank">
+                <img src="img\650Wfonte.png" alt="Fonte de Alimentação para PC Knup KP-526 350W">
+            </a>
+            <p>Esta é a Fonte Gamemax GP650 650W.</p>
+        </div>
+        <div class="image-container">
+            <a href="https://www.kabum.com.br/produto/248205/water-cooler-rise-mode-argb-240mm-amd-intel-preto-rm-wcb-04-argb?utm_id=21437971630&gad_source=1&gclid=EAIaIQobChMI753g--OmiAMVvVVIAB2DaCoEEAQYAiABEgI9kPD_BwE" target="_blank">
+                <img src="img\RiseMode.png" alt="Fonte de Alimentação para PC Knup KP-526 350W">
+            </a>
+            <p>Esta é o Water Cooler Rise Mode.</p>
+        </div>
+    </div>
+
+    <h1>Esse seria o PC perfeito para suas necessidades, saindo em um valor de:</h1>
+    <h1>4.500R$</h1>
+    <a href="index.html">
+        <button>Voltar</button>
+    </a>
+</body>
+<footer>
+    <p>&copy; 2024 Todos os direitos reservados.</p>
+    <p>Não temos nenhum tipo de parceria ou envolvimento com as lojas supracitadas.</p>
+    <p><a href="#contato" style="color: #000;">Contato</a> | <a href="#suporte" style="color: #000;">Suporte Técnico</a> | <a href="#termos" style="color: #000;">Termos de Uso</a></p>
+</footer>
+
+</html>

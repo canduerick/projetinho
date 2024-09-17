@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montagem de PCs - Formulário</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #333333);
+            color: #ffd700;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #000000;
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+
+        button {
+            width: 160px;
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ffd700, #b8860b);
+            color: #000000;
+            font-weight: bold;
+            transition: transform 0.10s, box-shadow 0.10s;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #6b6001, #f9d423);
+            color: #000;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        img {
+            width: 120px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="img/foto_logo.jpg">
+        <div class="logo">
+            <h1>Montagem de PC</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.1.html">Início</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="hardware.html">Hardware</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulário -->
+    <div class="container">
+        <h1>Formulário</h1>
+        <p>Neste espaço, você pode relatar seus problemas relacionados a computadores, e posteriormente, alguém poderá fornecer uma solução.</p>
+        <form id="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="problema">Problema:</label>
+            <textarea id="problema" name="problema" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const problema = document.getElementById('problema').value;
+
+            let dados = JSON.parse(localStorage.getItem('dados')) || [];
+
+            dados.push({ nome, problema });
+
+            localStorage.setItem('dados', JSON.stringify(dados));
+
+            window.location.href = 'dados.html';
+        });
+    </script>
+</body>
+</html>

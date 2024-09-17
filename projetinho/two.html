@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dois ou Menos</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #333333);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ffd700;
+            color: #000;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        header div {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 280px;
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-container p {
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 2rem;
+        }
+
+        button {
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e5c100;
+        }
+
+        header {
+            background-color: #ffd700;
+            color: #000;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        #menuToggle {
+            display: none;
+            background: #ffd700;
+            color: #000;
+            border: none;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Montagem de PC</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.prim.html">Início</a></li>
+                <li><a href="index.html">Montagem de PCs</a></li>
+                <li><a href="#suporte">Suporte Técnico</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle">☰</button>
+    </header>
+    
+    <header>
+        <div>Você selecionou dois arquivos ou menos!</div>
+        <div>Com isso, montamos um PC de acordo com sua necessidade:</div>
+        <div>Clique em cima da foto para ir para o site com o melhor preço!</div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="image-container">
+                <a href="#">
+                    <img src="#" alt="Placa de vídeo RTX 4060 ASUS">
+                </a>
+                <p>A placa de vídeo está integrada ao processador.</p>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.kabum.com.br/produto/102248/processador-amd-ryzen-3-3200g-3-6ghz-4ghz-max-turbo-cache-4mb-quad-core-4-threads-am4-yd3200c5fhbox?utm_id=21416437563&gad_source=1&gclid=Cj0KCQjw28W2BhC7ARIsAPerrcKaZw3S4012NwBECyWmMEFlNOhQU-BGlP_di_M0KnPGosI6rotpgL0aAkSKEALw_wcB" target="_blank">
+                    <img src="img/ryzen3200g.jpg" alt="Processador AMD Ryzen 3">
+                </a>
+                <p>Este é o Processador AMD Ryzen 3 3200G.</p>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.terabyteshop.com.br/produto/24700/placa-mae-maxsun-a520m-ms-challenger-chipset-a520-amd-am4-matx-ddr4?gad_source=1&gclid=EAIaIQobChMIuauLz9uciAMVUlhIAB12UB3jEAQYASABEgJFEPD_BwE" target="_blank">
+                    <img src="img/PlacaA520M.png" alt="Placa Mãe MAXSUN A520M">
+                </a>
+                <p>Esta é a Placa Mãe MAXSUN A520M.</p>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.terabyteshop.com.br/produto/17693/memoria-ddr4-hikvision-u10-8gb-3200mhz-black-hked4081caa2f0zb2?srsltid=AfmBOoqgXzbceBpCnEYXqOCEhWG41LhaJJRBw-1X6xSRtJVxDsogIl0v" target="_blank">
+                    <img src="img/Hikvision.png" alt="Memória DDR4 Hikvision U10, 8GB">
+                </a>
+                <p>Esta é a Memória DDR4 Hikvision U10, 8GB.</p>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.kabum.com.br/produto/85198/ssd-sata-kingston-a400-480gb-2-5-leitura-500mb-s-e-gravacao-450mb-s-preto-sa400s37-480g?utm_id=21437971630&gad_source=1&gclid=EAIaIQobChMInejfn9yciAMVSV1IAB3uFxBnEAQYAiABEgJOM_D_BwE" target="_blank">
+                    <img src="img/SSDKingston.png" alt="SSD SATA Kingston, A400, 480GB">
+                </a>
+                <p>SSD SATA Kingston, A400, 480GB.</p>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.terabyteshop.com.br/produto/26191/gabinete-gamer-liketec-craft-rgb-mid-tower-acrilico-m-atx-black-sem-fonte-sem-fan-lc-mt-craft-2021?gad_source=1&gclid=EAIaIQobChMIndjy1tyciAMVKF5IAB2lBTEMEAQYASABEgLNOPD_BwE" target="_blank">
+                    <img src="img/GabineteLiketec.png" alt="Gabinete Gamer Liketec">
+                </a>
+                <p>Este é o Gabinete Gamer Liketec.</p>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.terabyteshop.com.br/produto/27224/fonte-one-power-500w-pfc-ativo-black-mp-500-op-02?gad_source=1&gclid=EAIaIQobChMI_bzl-tociAMVRU8BIAB1gkJ0EAEYASABEgJiS_D_BwE" target="_blank">
+                    <img src="img/OnePower.png" alt="Fonte One Power 500W, PFC Ativo">
+                </a>
+                <p>Esta é a Fonte One Power 500W, PFC Ativo.</p>
+            </div>
+        </div>
+
+        <button onclick="window.history.back()">Voltar</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+        <p>Não temos nenhum tipo de parceria ou envolvimento com as lojas supracitadas.</p>
+        <p><a href="#contato" style="color: #000;">Contato</a> | <a href="#suporte" style="color: #000;">Suporte Técnico</a> | <a href="#termos" style="color: #000;">Termos de Uso</a></p>
+    </footer>
+</body>
+
+</html>
